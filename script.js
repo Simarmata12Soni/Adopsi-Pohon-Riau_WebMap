@@ -189,7 +189,8 @@ var loadData = function(loc) {
 
   Papa.parse(loc, {
     header: true,
-    download: true,
+    download: false,
+    dynamicTyping:true,
     complete: function(results) {
       addMarkers(results.data);
     }
